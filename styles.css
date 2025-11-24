@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #0d2b59;
+}
+
+/* NAVBAR */
+.navbar {
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+nav a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #0d2b59;
+  font-weight: 600;
+}
+
+/* HERO – layout lado a lado centralizado */
+.hero {
+  background: linear-gradient(#3a6ea5, #e0a5bd);
+  padding: 100px 0 120px 0;
+  display: flex;
+  justify-content: center;   /* CENTRALIZA o bloco inteiro */
+  align-items: center;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;    /* garante centralização perfeita */
+  gap: 70px;                  /* espaço entre logo e texto */
+  max-width: 1400px;
+  padding: 0 40px;
+}
+
+/* Logo grande ao lado do texto */
+.hero-logo {
+  width: 360px;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Texto grande e proporcional ao Figma */
+.hero-text h1 {
+  font-size: 72px;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+}
+
+.hero-text h2 {
+  font-size: 30px;
+  color: white;
+  margin: 5px 0 0 0;
+  font-weight: 600;
+}
+
+.hero-text p {
+  font-size: 24px;
+  margin-top: 18px;
+  color: white;
+  font-weight: 300;
+}
+
+.hero-text {
+  text-align: left;   /* fica igual ao Figma */
+}
+
+
+
+/* GENERAL SECTIONS */
+.section {
+  padding: 80px 140px;
+}
+
+/* ORTOFOTO */
+
+.ortofoto {
+  background: #3c73b3;
+  color: white;
+  padding-top: 80px;
+  padding-bottom: 80px; /* este padding agora será azul */
+}
+
+
+.ortofoto-image-section {
+  background: #3c73b3; /* deixa azul */
+  padding-bottom: 40px; /* padding azul antes da imagem */
+}
+
+
+/* IMAGE STITCHING */
+.stitch-grid {
+  display: grid;
+  grid-template-columns: 1fr 600px;
+  align-items: center;
+  gap: 40px;
+}
+.stitch-img { width: 100%; height: auto; }
+
+/* TEAM */
+.equipe {
+  background: #3c73b3;
+  color: white;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.member { font-size: 18px; }
+
+/* REPOSITORY */
+.repo-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+.repo-btn {
+  background: #3c73b3;
+  color: white;
+  padding: 16px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 18px;
+  justify-self: right;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #3c73b3;
+  color: white;
+}
