@@ -22,32 +22,30 @@ nav a {
   font-weight: 600;
 }
 
-/* HERO – layout lado a lado centralizado */
+/* HERO */
 .hero {
   background: linear-gradient(#3a6ea5, #e0a5bd);
   padding: 100px 0 120px 0;
   display: flex;
-  justify-content: center;   /* CENTRALIZA o bloco inteiro */
+  justify-content: center;  
   align-items: center;
 }
 
 .hero-container {
   display: flex;
   align-items: center;
-  justify-content: center;    /* garante centralização perfeita */
-  gap: 70px;                  /* espaço entre logo e texto */
+  justify-content: center;    
+  gap: 70px;                  
   max-width: 1400px;
   padding: 0 40px;
 }
 
-/* Logo grande ao lado do texto */
 .hero-logo {
   width: 360px;
   height: auto;
   border-radius: 50%;
 }
 
-/* Texto grande e proporcional ao Figma */
 .hero-text h1 {
   font-size: 72px;
   font-weight: 800;
@@ -70,7 +68,7 @@ nav a {
 }
 
 .hero-text {
-  text-align: left;   /* fica igual ao Figma */
+  text-align: left;   
 }
 
 
@@ -86,27 +84,30 @@ nav a {
   background: #3c73b3;
   color: white;
   padding-top: 80px;
-  padding-bottom: 80px; /* este padding agora será azul */
+  padding-bottom: 80px; 
 }
 
 
 .ortofoto-image-section {
-  background: #3c73b3; /* deixa azul */
-  padding-bottom: 40px; /* padding azul antes da imagem */
+  background: #3c73b3; 
+  padding-bottom: 40px; 
 }
 
 
 /* IMAGE STITCHING */
-.stitch-grid {
-  grid-template-columns: 1fr;
-}
-
-/* garante alinhamento correto apenas nos textos */
 .stitch-grid .stitch-text {
   text-align: left;
 }
 
-.stitch-img { width: 100%; height: auto; }
+/* DESKTOP  */
+.stitch-img {
+  width: 90%;          
+  height: auto;
+  justify-self: end;   
+  margin-left: auto;   
+}
+
+
 
 /* TEAM */
 .equipe {
@@ -195,12 +196,10 @@ footer {
     width: 280px;
   }
 
-  /* Seções com padding menor */
   .section {
     padding: 60px 40px;
   }
 
-  /* Image Stitching vira coluna */
   .stitch-grid {
     grid-template-columns: 1fr;
     text-align: center;
@@ -211,18 +210,15 @@ footer {
     margin: 40px auto 0 auto;
   }
 
-  /* Repositório vira coluna */
   .repo-grid {
   grid-template-columns: 1fr;
 }
 
-/* textos alinhados à esquerda */
 .repo-grid h1,
 .repo-grid p {
   text-align: left;
 }
 
-/* botão continua centralizado */
 .repo-btn {
   justify-self: center;
 }
@@ -256,18 +252,59 @@ footer {
     padding: 40px 24px;
   }
 
-  /* EQUIPE — vira uma coluna só */
+  /* EQUIPE */
   .team-grid {
     grid-template-columns: 1fr;
   }
 
   .placeholder {
-    display: none; /* remove card invisível no mobile */
+    display: none; 
   }
 
-  /* Imagem fullwidth permanece fullwidth */
   .fullwidth-img {
     width: 100%;
     margin: 20px 0 0 0;
   }
+}
+
+/* =====================================================
+   IMAGE STITCHING — DESKTOP 
+   ===================================================== */
+
+@media (min-width: 901px) {
+
+    .stitch-grid {
+        display: grid;
+        grid-template-columns: 1fr 520px !important; 
+        align-items: center;
+        justify-items: end;
+    }
+
+    .stitch-img {
+        width: 100% !important;
+        max-width: 520px !important; 
+        height: auto;
+        justify-self: end !important;
+        margin: 0 !important;       
+        padding: 0 !important;
+    }
+}
+
+
+
+
+
+/* === IMAGE STITCHING – MOBILE  === */
+@media (max-width: 900px) {
+
+    .stitch-grid {
+        grid-template-columns: 1fr;   
+    }
+
+    .stitch-img {
+        width: 100vw;   
+        margin-left: calc(-50vw + 50%);   
+        margin-right: calc(-50vw + 50%);
+        margin-top: 30px;  
+    }
 }
